@@ -17,3 +17,19 @@ COMANDOS
 - python (scratchpad)/mk_paraguai.py (copia e adapta arquivos); python scripts/update_playlist.py -> 18 vídeos
   (YouTube confirma 18 vídeos na playlist)
 - git init; gh repo create FelipeCOjeda/paraguai-ojeda --public --push; gh api POST pages (main, /)
+
+=== 2026-10-30 (2) ===
+PEDIDO
+- Usar o subdomínio videos.mosheinternacional.com (domínio da Moshe, DNS na GoDaddy; mosheinternacional.com já é
+  o site Pages do repo mosheinternacional-site) e manter o cabeçalho com botões para o site da Moshe, blog,
+  contato etc.
+ALTERAÇÕES
+- index.html reescrito no padrão do site da Moshe: cabeçalho escuro fixo com logo (logo.png, extraído do
+  mosheinternacional-site), links A Moshe, Soluções, Blog, eBook gratuito, Contato (wa.link/moshe) e botão
+  Agendar consulta (mosheinternacional.com/#consulta); menu "Menu ☰" no celular; destaque dourado; rodapé com
+  contatos (WhatsApp, e-mail contato@mosheinternacional.com) e aviso. Aba "Mentoria e Consultoria" removida
+  (a consulta real é a da Moshe, via botão). Player + grade de 18 vídeos + busca mantidos.
+- Teste local (python -m http.server 8766, encerrado): menu, links, logo e 18 cards OK.
+PENDENTE
+- Usuário criar na GoDaddy: CNAME  videos -> felipecojeda.github.io
+- Depois: arquivo CNAME (videos.mosheinternacional.com), Pages cname + HTTPS.

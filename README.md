@@ -1,6 +1,6 @@
-# Paraguai Ojeda
+# Vídeos sobre o Paraguai — Moshe Internacional
 
-Site com duas abas: **Vídeos** (playlist *Paraguai* do [canal no YouTube](https://www.youtube.com/@BitcoineLiberdade)) e **Mentoria e Consultoria**.
+Página de vídeos (playlist *Paraguai*) com o cabeçalho e os links do site da Moshe Internacional (site, blog, contato, consulta). Destino: videos.mosheinternacional.com.
 
 Playlist: https://www.youtube.com/playlist?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg
 
