@@ -1,0 +1,19 @@
+REGISTRO — paraguai-ojeda
+(Só acrescentar no fim. Sem senhas/chaves/tokens.)
+
+=== 2026-10-30 ===
+PEDIDO
+- Fazer "exatamente o mesmo" do site Escola Bitcoin para outra playlist e outro repositório:
+  repositório "paraguai ojeda" (criado como paraguai-ojeda) com a playlist PARAGUAI
+  https://www.youtube.com/playlist?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg
+DECISÕES
+- Estrutura copiada de bitcoin-para-iniciantes: index.html (2 abas por #hash: Vídeos e Mentoria e Consultoria),
+  scripts/update_playlist.py, GitHub Action a cada 3 h, .nojekyll, README.
+- Marca "Paraguai Ojeda". Textos da aba Mentoria adaptados aos temas dos vídeos (mudança, documentos/residência,
+  saída fiscal, Migramóvil x assessoria, cripto). Sem preços. Mesmo WhatsApp do outro site. Rodapé: aviso de
+  que não substitui assessoria jurídica/contábil/tributária.
+- Sem domínio próprio por enquanto (nenhum informado): endereço github.io.
+COMANDOS
+- python (scratchpad)/mk_paraguai.py (copia e adapta arquivos); python scripts/update_playlist.py -> 18 vídeos
+  (YouTube confirma 18 vídeos na playlist)
+- git init; gh repo create FelipeCOjeda/paraguai-ojeda --public --push; gh api POST pages (main, /)

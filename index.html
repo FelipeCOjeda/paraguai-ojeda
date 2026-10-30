@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paraguai Ojeda | Vídeos, mentoria e consultoria</title>
+<meta name="description" content="Paraguai Ojeda: vídeos gratuitos sobre mudar para o Paraguai (residência, documentos, saída fiscal, Bitcoin) e mentoria e consultoria individual em português.">
+<meta property="og:title" content="Paraguai Ojeda — Vídeos, mentoria e consultoria">
+<meta property="og:description" content="Residência, documentos, saída fiscal e Bitcoin: tudo sobre o Paraguai.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ytimg.com/vi/LGo-jJ74egQ/hqdefault.jpg">
+<meta name="theme-color" content="#0e0e11">
+<style>
+  :root{
+    --bg:#0e0e11; --card:#17171c; --line:#2a2a33; --text:#f1f1f4; --muted:#9a9aa8; --btc:#f7931a; --btc2:#ffb454;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#faf8f5; --card:#fff; --line:#e6e1d9; --text:#1c1b1f; --muted:#6b6872; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  header{padding:56px 0 28px;text-align:center}
+  .kicker{color:var(--btc);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+  h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:.4rem 0 .8rem}
+  h1 span{color:var(--btc)}
+  .lead{max-width:640px;margin:0 auto 1.5rem;color:var(--muted);font-size:1.1rem}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;border:2px solid var(--btc)}
+  .btn.primary{background:var(--btc);color:#111}
+  .btn.primary:hover{background:var(--btc2)}
+  .btn.ghost:hover{background:rgba(247,147,26,.12)}
+  .player{margin:12px auto 8px;max-width:900px;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .player iframe{width:100%;height:100%;border:0;display:block}
+  .bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:36px 0 16px}
+  .bar h2{margin:0;font-size:1.5rem}
+  .count{color:var(--muted);font-weight:400;font-size:1rem}
+  input[type=search]{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:10px 18px;min-width:min(100%,280px);font-size:1rem}
+  input[type=search]:focus{outline:2px solid var(--btc);border-color:transparent}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;list-style:none;margin:0;padding:0}
+  .item a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;height:100%;transition:transform .15s,border-color .15s}
+  .item a:hover,.item a:focus-visible{transform:translateY(-3px);border-color:var(--btc)}
+  .thumb{position:relative;aspect-ratio:16/9;background:#222}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .num{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.75);color:#fff;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:6px}
+  .item h3{margin:0;padding:12px 14px 16px;font-size:.98rem;line-height:1.35}
+  .empty,.status{color:var(--muted);text-align:center;padding:32px 0}
+  footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{color:var(--btc)}
+  header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:18px 16px;border-bottom:1px solid var(--line);text-align:left}
+  .brand{font-weight:800;font-size:1.25rem;letter-spacing:-.01em}
+  .brand span{color:var(--btc)}
+  nav.tabs{display:flex;gap:6px;flex-wrap:wrap}
+  nav.tabs a{padding:8px 16px;border-radius:999px;font-weight:600;color:var(--muted);border:1px solid transparent}
+  nav.tabs a:hover{color:var(--text);border-color:var(--line)}
+  nav.tabs a[aria-current=page]{background:var(--btc);color:#111}
+  .hero{text-align:center;padding:48px 0 24px}
+  section[hidden]{display:none}
+  .sec-title{font-size:1.5rem;margin:44px 0 16px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{margin:0 0 8px;font-size:1.2rem;color:var(--btc)}
+  .card p{margin:0 0 10px;color:var(--muted)}
+  .card ul,.topics{margin:0;padding-left:1.2rem}
+  .card li,.topics li{margin:4px 0}
+  .steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .steps li::before{content:counter(s);display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--btc);color:#111;font-weight:800;align-items:center;justify-content:center;margin-bottom:8px}
+  .steps strong{display:block;margin-bottom:4px}
+  .note{color:var(--muted);font-size:.9rem;margin-top:16px}
+  .final{text-align:center;margin:48px 0 8px;padding:32px 20px;border:1px solid var(--btc);border-radius:16px;background:rgba(247,147,26,.08)}
+  .final h2{margin:0 0 8px}
+  .final p{color:var(--muted);margin:0 0 18px}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <div class="brand">Paraguai <span>Ojeda</span></div>
+  <nav class="tabs" aria-label="Seções">
+    <a href="#videos" id="nav-videos">Vídeos</a>
+    <a href="#mentoria" id="nav-mentoria">Mentoria e Consultoria</a>
+  </nav>
+</header>
+
+<main class="wrap">
+<section id="tab-videos">
+  <div class="hero">
+    <h1>Tudo sobre o <span>Paraguai</span></h1>
+    <p class="lead">Por que o Paraguai, como mudar, documentos, residência fiscal, Bitcoin e muito mais, com dados e experiência real.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.youtube.com/playlist?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg" target="_blank" rel="noopener">▶ Ver a playlist no YouTube</a>
+      <a class="btn ghost" href="https://www.youtube.com/@BitcoineLiberdade?sub_confirmation=1" target="_blank" rel="noopener">Inscrever-se no canal</a>
+    </div>
+  </div>
+  <div class="player">
+    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg"
+            title="Playlist Paraguai" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+  </div>
+
+  <div class="bar">
+    <h2>Todos os vídeos <span class="count" id="count"></span></h2>
+    <input type="search" id="q" placeholder="Buscar vídeo…" aria-label="Buscar vídeo">
+  </div>
+
+  <p class="status" id="status">Carregando vídeos…</p>
+  <ul class="grid" id="grid"></ul>
+</section>
+
+<section id="tab-mentoria" hidden>
+  <div class="hero">
+    <h1>Mentoria e <span>Consultoria</span></h1>
+    <p class="lead">Orientação direta comigo para planejar sua mudança para o Paraguai com segurança, do primeiro passo à residência e à saída fiscal bem feita.</p>
+    <div class="cta"><a class="btn primary wa" href="#" target="_blank" rel="noopener">Falar comigo no WhatsApp</a></div>
+  </div>
+
+  <h2 class="sec-title">Dois formatos</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Mentoria</h3>
+      <p>Acompanhamento individual ao longo de todo o processo, para você não errar nem perder tempo.</p>
+      <ul>
+        <li>Plano da mudança, passo a passo e no seu ritmo</li>
+        <li>Documentação, residência e habilitação no Paraguai</li>
+        <li>Saída fiscal do Brasil feita do jeito certo</li>
+        <li>Acompanhamento até você estar instalado e seguro</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Consultoria</h3>
+      <p>Orientação pontual e objetiva para uma dúvida ou decisão específica.</p>
+      <ul>
+        <li>Migramóvil ou assessoria: o que vale a pena para o seu caso</li>
+        <li>Bitcoin e cripto: declaração e organização dos seus ativos</li>
+        <li>Revisão do seu plano e dos riscos antes de dar o passo</li>
+        <li>Visão realista de custos, rotina e expectativas</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec-title">Temas que costumo trabalhar</h2>
+  <ul class="topics">
+    <li>Por que o Paraguai: dados, indicadores e objeções comuns</li>
+    <li>Passaporte, documentos, residência e habilitação para dirigir</li>
+    <li>Residência fiscal e como evitar uma saída fiscal mal feita</li>
+    <li>Bitcoin, cripto e as regras de declaração</li>
+    <li>Custo de vida, energia, investimentos e vida no dia a dia</li>
+  </ul>
+
+  <h2 class="sec-title">Como funciona</h2>
+  <ol class="steps">
+    <li><strong>Conversa inicial</strong>Você me chama no WhatsApp e conta onde está e o que pretende.</li>
+    <li><strong>Diagnóstico</strong>Entendo seu caso e indico o formato mais adequado.</li>
+    <li><strong>Plano e acompanhamento</strong>Combinamos o passo a passo e eu te acompanho nas decisões.</li>
+  </ol>
+
+  <div class="final">
+    <h2>Vamos conversar?</h2>
+    <p>Sem compromisso: me conte sua situação e eu digo como posso ajudar.</p>
+    <a class="btn primary wa" href="#" target="_blank" rel="noopener">Falar comigo no WhatsApp</a>
+  </div>
+  <p class="note">Conteúdo informativo e de orientação. Não substitui assessoria jurídica, contábil ou tributária individual, nem promete resultado.</p>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Conteúdo informativo, não substitui assessoria jurídica, contábil ou tributária individual.<br>
+    © Paraguai Ojeda · <a href="https://www.youtube.com/@BitcoineLiberdade" target="_blank" rel="noopener">Canal no YouTube</a>
+    <span id="updated"></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var PL = "PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg";
+  var grid = document.getElementById("grid"), status = document.getElementById("status");
+  var count = document.getElementById("count"), q = document.getElementById("q");
+  var videos = [];
+
+  function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+
+  function render(){
+    var term = norm(q.value.trim());
+    grid.textContent = "";
+    var shown = 0;
+    videos.forEach(function(v, i){
+      if (term && norm(v.title).indexOf(term) === -1) return;
+      shown++;
+      var li = document.createElement("li"); li.className = "item";
+      var a = document.createElement("a");
+      a.href = "https://www.youtube.com/watch?v=" + v.id + "&list=" + PL + "&index=" + (i+1);
+      a.target = "_blank"; a.rel = "noopener";
+      var t = document.createElement("div"); t.className = "thumb";
+      var img = document.createElement("img");
+      img.loading = "lazy"; img.alt = ""; img.src = "https://i.ytimg.com/vi/" + v.id + "/mqdefault.jpg";
+      var n = document.createElement("span"); n.className = "num"; n.textContent = "#" + (i+1);
+      t.appendChild(img); t.appendChild(n);
+      var h = document.createElement("h3"); h.textContent = v.title;
+      a.appendChild(t); a.appendChild(h); li.appendChild(a); grid.appendChild(li);
+    });
+    status.textContent = shown ? "" : "Nenhum vídeo encontrado.";
+    status.hidden = !!shown;
+    count.textContent = "(" + (term ? shown + " de " : "") + videos.length + ")";
+  }
+
+  fetch("videos.json", {cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
+    videos = d.videos || [];
+    if (d.updated) {
+      var dt = new Date(d.updated);
+      document.getElementById("updated").textContent = " · lista atualizada em " + dt.toLocaleDateString("pt-BR");
+    }
+    render();
+  }).catch(function(){
+    status.innerHTML = 'Não foi possível carregar a lista. <a href="https://www.youtube.com/playlist?list=' + PL + '" style="color:var(--btc)">Abra a playlist no YouTube</a>.';
+  });
+
+  q.addEventListener("input", render);
+
+  // Abas (por #hash) e botão de WhatsApp
+  var WHATSAPP = "5511964355344";   // número com DDI+DDD, só dígitos (ex.: 5511999999999)
+  var MSG = "Olá! Vim pelo site Paraguai Ojeda e quero saber mais sobre mentoria/consultoria sobre o Paraguai.";
+  document.querySelectorAll(".wa").forEach(function(a){
+    if (WHATSAPP) a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MSG);
+    else a.hidden = true;
+  });
+  function tab(){
+    var m = location.hash === "#mentoria";
+    document.getElementById("tab-videos").hidden = m;
+    document.getElementById("tab-mentoria").hidden = !m;
+    document.getElementById("nav-videos").setAttribute("aria-current", m ? "false" : "page");
+    document.getElementById("nav-mentoria").setAttribute("aria-current", m ? "page" : "false");
+    document.title = m ? "Mentoria e Consultoria | Paraguai Ojeda" : "Paraguai Ojeda | Vídeos, mentoria e consultoria";
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", tab);
+  tab();
+})();
+</script>
+</body>
+</html>
