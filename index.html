@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vídeos sobre o Paraguai | Moshe Internacional</title>
-<meta name="description" content="Vídeos gratuitos sobre mudar para o Paraguai: por que o Paraguai, documentos, residência, saída fiscal, Bitcoin e muito mais. Moshe Internacional.">
-<meta property="og:title" content="Vídeos sobre o Paraguai — Moshe Internacional">
-<meta property="og:description" content="Residência, documentos, saída fiscal e Bitcoin: tudo sobre o Paraguai, com dados e experiência real.">
+<title>Centro de informações sobre o Paraguai | Moshe Internacional</title>
+<meta name="description" content="Vídeos e artigos gratuitos sobre o Paraguai: residência, documentos, saída fiscal, investimentos, Bitcoin e muito mais. Moshe Internacional.">
+<meta property="og:title" content="Centro de informações sobre o Paraguai — Moshe Internacional">
+<meta property="og:description" content="Vídeos e artigos sobre residência, documentos, saída fiscal e Bitcoin no Paraguai, com dados e experiência real.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://i.ytimg.com/vi/LGo-jJ74egQ/hqdefault.jpg">
 <meta name="theme-color" content="#17181b">
@@ -67,6 +67,21 @@
   .num{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.75);color:#fff;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:6px}
   .item h3{margin:0;padding:12px 14px 16px;font-size:.98rem;line-height:1.35}
   .status{color:var(--muted);text-align:center;padding:32px 0}
+  .featured{max-width:900px;margin:0 auto}
+  .featured .kicker{margin:8px 0 10px}
+  .featured h2{margin:14px 0 2px;font-size:1.35rem;line-height:1.3}
+  .featured p{margin:0;color:var(--muted);font-size:.92rem}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:600 .88rem system-ui;cursor:pointer}
+  .chip:hover{color:var(--text);border-color:var(--gold)}
+  .chip[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#161719}
+  .tag{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.78);color:var(--gold2);font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:3px 9px;border-radius:6px;text-transform:uppercase}
+  .meta{display:block;padding:0 14px 14px;color:var(--muted);font-size:.82rem}
+  .item.article a{display:flex;flex-direction:column;justify-content:space-between;border-color:#4a4331;background:linear-gradient(160deg,#26231b,#212226 60%)}
+  .abody{position:relative;padding:44px 14px 6px}
+  .abody .tag{color:#161719;background:var(--gold)}
+  .item.article h3{padding:6px 0 10px}
+  .more{display:block;padding:0 14px 16px;color:var(--gold);font-weight:700;font-size:.88rem}
 
   .closing{margin:56px 0 0;padding:36px 28px;border:1px solid var(--gold);border-radius:14px;background:rgba(196,167,109,.08);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
   .closing h2{margin:0 0 4px;font-size:1.6rem;line-height:1.2}
@@ -104,26 +119,36 @@
 <main class="wrap">
   <div class="hero">
     <div class="kicker">Brasil ↔ Paraguai</div>
-    <h1>Tudo sobre o <span>Paraguai</span></h1>
-    <p class="lead">Por que o Paraguai, como mudar, documentos, residência fiscal, Bitcoin e muito mais, com dados e experiência real.</p>
+    <h1>Centro de informações sobre o <span>Paraguai</span></h1>
+    <p class="lead">Vídeos e artigos sobre por que o Paraguai, como mudar, documentos, residência fiscal, Bitcoin e muito mais, com dados e experiência real.</p>
     <div class="cta">
       <a class="btn" href="https://www.youtube.com/playlist?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg" target="_blank" rel="noopener">▶ Ver a playlist no YouTube</a>
       <a class="btn outline" href="https://www.youtube.com/@BitcoineLiberdade?sub_confirmation=1" target="_blank" rel="noopener">Inscrever-se no canal</a>
     </div>
   </div>
 
-  <div class="player">
-    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg"
-            title="Playlist Paraguai" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+  <div class="featured">
+    <div class="kicker">Vídeo mais recente</div>
+    <div class="player">
+      <iframe id="feat" src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg"
+              title="Vídeo mais recente" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </div>
+    <h2 id="feat-title"></h2>
+    <p id="feat-date"></p>
   </div>
 
   <div class="bar">
-    <h2>Todos os vídeos <span class="count" id="count"></span></h2>
-    <input type="search" id="q" placeholder="Buscar vídeo…" aria-label="Buscar vídeo">
+    <h2>Vídeos e artigos <span class="count" id="count"></span></h2>
+    <div class="chips" role="group" aria-label="Filtrar por tipo">
+      <button class="chip" data-f="all" aria-pressed="true">Tudo</button>
+      <button class="chip" data-f="video" aria-pressed="false">Vídeos</button>
+      <button class="chip" data-f="article" aria-pressed="false">Artigos</button>
+    </div>
+    <input type="search" id="q" placeholder="Buscar…" aria-label="Buscar vídeos e artigos">
   </div>
-  <p class="status" id="status">Carregando vídeos…</p>
+  <p class="status" id="status">Carregando…</p>
   <ul class="grid" id="grid"></ul>
 
   <div class="closing">
@@ -171,48 +196,90 @@
   var PL = "PL1TShuYSNH-tlBHORUdi7w6r1AdDym2fg";
   var grid = document.getElementById("grid"), status = document.getElementById("status");
   var count = document.getElementById("count"), q = document.getElementById("q");
-  var videos = [];
-
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  var items = [], filter = "all";
+  var chips = document.querySelectorAll(".chip");
+
   function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+  function br(d){ var p = String(d).slice(0,10).split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : ""; }
+
+  function card(it){
+    var li = document.createElement("li");
+    li.className = "item " + it.type;
+    var a = document.createElement("a");
+    a.target = "_blank"; a.rel = "noopener";
+    var h = document.createElement("h3"); h.textContent = it.title;
+    var meta = document.createElement("span"); meta.className = "meta"; meta.textContent = br(it.date);
+    if (it.type === "video") {
+      a.href = "https://www.youtube.com/watch?v=" + it.id + "&list=" + PL + "&index=" + it.pos;
+      var t = document.createElement("div"); t.className = "thumb";
+      var img = document.createElement("img");
+      img.loading = "lazy"; img.alt = ""; img.src = "https://i.ytimg.com/vi/" + it.id + "/mqdefault.jpg";
+      var tag = document.createElement("span"); tag.className = "tag"; tag.textContent = "Vídeo";
+      t.appendChild(img); t.appendChild(tag);
+      a.appendChild(t); a.appendChild(h); a.appendChild(meta);
+    } else {
+      a.href = it.url;
+      var top = document.createElement("div");
+      var body = document.createElement("div"); body.className = "abody";
+      var tg = document.createElement("span"); tg.className = "tag"; tg.textContent = "Artigo";
+      body.appendChild(tg); body.appendChild(h);
+      var more = document.createElement("span"); more.className = "more"; more.textContent = "Ler artigo ↗";
+      top.appendChild(body); top.appendChild(meta);
+      a.appendChild(top); a.appendChild(more);
+    }
+    li.appendChild(a);
+    return li;
+  }
 
   function render(){
     var term = norm(q.value.trim());
     grid.textContent = "";
     var shown = 0;
-    videos.forEach(function(v, i){
-      if (term && norm(v.title).indexOf(term) === -1) return;
+    items.forEach(function(it){
+      if (filter !== "all" && it.type !== filter) return;
+      if (term && norm(it.title).indexOf(term) === -1) return;
       shown++;
-      var li = document.createElement("li"); li.className = "item";
-      var a = document.createElement("a");
-      a.href = "https://www.youtube.com/watch?v=" + v.id + "&list=" + PL + "&index=" + (i+1);
-      a.target = "_blank"; a.rel = "noopener";
-      var t = document.createElement("div"); t.className = "thumb";
-      var img = document.createElement("img");
-      img.loading = "lazy"; img.alt = ""; img.src = "https://i.ytimg.com/vi/" + v.id + "/mqdefault.jpg";
-      var n = document.createElement("span"); n.className = "num"; n.textContent = "#" + (i+1);
-      t.appendChild(img); t.appendChild(n);
-      var h = document.createElement("h3"); h.textContent = v.title;
-      a.appendChild(t); a.appendChild(h); li.appendChild(a); grid.appendChild(li);
+      grid.appendChild(card(it));
     });
-    status.textContent = shown ? "" : "Nenhum vídeo encontrado.";
+    status.textContent = shown ? "" : "Nada encontrado.";
     status.hidden = !!shown;
-    count.textContent = "(" + (term ? shown + " de " : "") + videos.length + ")";
+    var nv = items.filter(function(i){ return i.type === "video"; }).length;
+    count.textContent = "(" + (term || filter !== "all" ? shown + " de " : "") + items.length + " · " + nv + " vídeos, " + (items.length - nv) + " artigos)";
+  }
+
+  function feature(){
+    var v = items.filter(function(i){ return i.type === "video"; })[0];
+    if (!v) return;
+    document.getElementById("feat").src = "https://www.youtube-nocookie.com/embed/" + v.id + "?list=" + PL;
+    document.getElementById("feat").title = v.title;
+    document.getElementById("feat-title").textContent = v.title;
+    document.getElementById("feat-date").textContent = "Publicado em " + br(v.date);
   }
 
   fetch("videos.json", {cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-    videos = d.videos || [];
+    var vs = (d.videos || []).map(function(v){ v.type = "video"; return v; });
+    var as = (d.articles || []).map(function(a){ a.type = "article"; return a; });
+    items = vs.concat(as).sort(function(a, b){ return Date.parse(b.date || 0) - Date.parse(a.date || 0); });
     if (d.updated) {
       var dt = new Date(d.updated);
       document.getElementById("updated").textContent = " Lista atualizada em " + dt.toLocaleDateString("pt-BR") + ".";
     }
+    feature();
     render();
   }).catch(function(){
     status.innerHTML = 'Não foi possível carregar a lista. <a href="https://www.youtube.com/playlist?list=' + PL + '" style="color:var(--gold)">Abra a playlist no YouTube</a>.';
   });
 
   q.addEventListener("input", render);
+  chips.forEach(function(c){
+    c.addEventListener("click", function(){
+      filter = c.getAttribute("data-f");
+      chips.forEach(function(x){ x.setAttribute("aria-pressed", x === c ? "true" : "false"); });
+      render();
+    });
+  });
 
   // Menu no celular
   var menu = document.querySelector(".menu"), links = document.querySelector(".links");

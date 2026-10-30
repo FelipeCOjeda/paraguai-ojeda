@@ -33,3 +33,25 @@ ALTERAÇÕES
 PENDENTE
 - Usuário criar na GoDaddy: CNAME  videos -> felipecojeda.github.io
 - Depois: arquivo CNAME (videos.mosheinternacional.com), Pages cname + HTTPS.
+
+=== 2026-10-30 (3) ===
+PEDIDOS
+- Manter sempre o vídeo mais atual em destaque primeiro, em ordem decrescente.
+- Usuário notou que o vídeo https://youtu.be/IJ4Bs531dvg e outros não apareciam no site.
+- Incluir também os artigos do site da Moshe, intercalados com os vídeos, formando um centro de informações
+  sobre o Paraguai.
+DIAGNÓSTICO
+- A playlist passou de 18 para 27 vídeos depois da publicação; o site mostrava a lista antiga porque a
+  atualização agendada (cron a cada 3 h) ainda não tinha rodado (só existia a execução manual). IJ4Bs531dvg
+  ("Mapa da Violência do Paraguai", 14/02/2025) está na playlist.
+ALTERAÇÕES
+- scripts/update_playlist.py: lê a data de publicação de cada vídeo (watch page, com cache no videos.json),
+  guarda a posição original (pos) para os links, ordena do mais novo ao mais antigo; lê os artigos de
+  https://mosheinternacional.com/blog-postagens.json (20 artigos; data dd/mm/aaaa) e grava em "articles";
+  se o blog falhar, mantém os artigos anteriores.
+- index.html: destaque "Vídeo mais recente" (player do vídeo mais novo + título e data); feed único com
+  vídeos e artigos misturados por data; filtros Tudo/Vídeos/Artigos; busca; cartões de artigo (tag ARTIGO,
+  link para a página do artigo no site da Moshe). Título/descrição: "Centro de informações sobre o Paraguai".
+- videos.json: 27 vídeos + 20 artigos.
+- Teste local (python -m http.server 8767, encerrado): 47 itens em ordem decrescente, destaque = vídeo de
+  30/10/2026, filtros OK, links OK.
