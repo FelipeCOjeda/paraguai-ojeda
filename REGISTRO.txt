@@ -60,3 +60,9 @@ ALTERAÇÕES
 - Worker github-dispatch-cron (Cloudflare) passou a disparar este Action a cada 3 h; teste de 16:28 UTC: 204 e
   execução com sucesso. Mesma melhoria do site da Escola Bitcoin em scripts/update_playlist.py: a trava de
   lista suspeita aceita encolhimento quando bate com o total "N vídeos" declarado pelo YouTube.
+
+=== 2026-10-30 (5) ===
+- Usuário criou o CNAME videos -> felipecojeda.github.io na GoDaddy; DNS conferido (canonical name =
+  felipecojeda.github.io, IPs do GitHub Pages).
+- Arquivo CNAME (videos.mosheinternacional.com) + gh api PUT .../pages -f cname=videos.mosheinternacional.com
+  e https_enforced=true (feito após o certificado ficar disponível).
