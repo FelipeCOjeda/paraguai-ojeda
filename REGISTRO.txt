@@ -55,3 +55,8 @@ ALTERAÇÕES
 - videos.json: 27 vídeos + 20 artigos.
 - Teste local (python -m http.server 8767, encerrado): 47 itens em ordem decrescente, destaque = vídeo de
   30/10/2026, filtros OK, links OK.
+
+=== 2026-10-30 (4) ===
+- Worker github-dispatch-cron (Cloudflare) passou a disparar este Action a cada 3 h; teste de 16:28 UTC: 204 e
+  execução com sucesso. Mesma melhoria do site da Escola Bitcoin em scripts/update_playlist.py: a trava de
+  lista suspeita aceita encolhimento quando bate com o total "N vídeos" declarado pelo YouTube.

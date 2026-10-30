@@ -134,7 +134,10 @@ def main():
     if OUT.exists():
         try:
             old = json.loads(OUT.read_text(encoding="utf-8")).get("videos", [])
-            if len(unique) < len(old) * 0.8:
+            # Aceita o encolhimento se bater com o total que o próprio YouTube declara na página.
+            declared = re.search(r'"(\d+) v[ií]deos"', html)
+            confirmado = bool(declared) and int(declared.group(1)) == len(unique)
+            if len(unique) < len(old) * 0.8 and not confirmado:
                 sys.exit(f"Lista suspeita ({len(unique)} vs {len(old)}); mantendo a anterior")
         except json.JSONDecodeError:
             pass
